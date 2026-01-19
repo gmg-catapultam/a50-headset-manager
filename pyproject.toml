@@ -26,5 +26,8 @@ a50-headset-manager = "a50_headset_manager:main"
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
+[tool.hatch.metadata]
+allow-direct-references = true
+
 [tool.hatch.build.targets.wheel]
 packages = ["a50_headset_manager.py"]
