@@ -1,0 +1,30 @@
+[project]
+name = "a50-headset-manager"
+version = "0.1.0"
+dependencies = [
+  "eh-fifty @ git+https://github.com/gmg-catapultam/eh-fifty.git",
+]
+authors = [
+  { name="catapultam" },
+]
+description = "Automatic audio switching daemon for the Astro A50 wireless headset"
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: POSIX :: Linux",
+]
+
+[project.scripts]
+a50-headset-manager = "a50_headset_manager:main"
+
+[project.urls]
+"Homepage" = "https://github.com/gmg-catapultam/a50-headset-manager"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["a50_headset_manager.py"]

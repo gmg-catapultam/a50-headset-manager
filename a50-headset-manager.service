@@ -1,0 +1,14 @@
+[Unit]
+Description=A50 Headset Audio Switcher
+Documentation=https://github.com/catapultam/a50-headset-manager
+# Start after PipeWire is available (for audio switching)
+After=pipewire.service
+
+[Service]
+Type=simple
+ExecStart=%h/.local/bin/a50-headset-manager
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target
